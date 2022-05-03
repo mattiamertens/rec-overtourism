@@ -168,17 +168,44 @@ a {
     height: 100%;
     width: 100%;
 }
+
 .destinations{
     position: absolute;
-    margin: 16% 0 0 10%;
+    margin: 12% 0 0 10%;
     width: 80%;
+    height: 75vh;
+    overflow: scroll
+}
+.destinations::-webkit-scrollbar {
+    display: none;
 }
 .place{
     align-items: baseline;
+    margin: 8% 0 0;
+    padding-bottom: 30%;
+}
+.yellow-text{
+    color: var(--yellow);
+}
+.left-info{
+    width: 85%;
+}
+.header{
+    margin-bottom: 2%;
+    justify-content: flex-start;
+}
+.square{
+    width: 14px;
+    height: 14px;
+    margin-right: 2%;
+    background-color: var(--yellow);
+    display: none;
+}
+.on-screen{
+    display: inline;
 }
 .destination-title{
     font-size: 36px;
-    margin-bottom: 15px;
 }
 .continent{
     font-family: Neue Machina regular;
