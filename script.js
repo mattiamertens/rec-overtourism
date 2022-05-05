@@ -6,10 +6,13 @@
 //     $(this).children('.left-info').children('.header').children('.square').removeClass('on-screen');
 // })
 
-document.querySelector('.destinations').addEventListener('scroll', function(){
 
-    scrollDetection();
-});
+
+// DA RIATTIVARE
+// document.querySelector('.destinations').addEventListener('scroll', function(){
+
+//     scrollDetection();
+// });
 
 function scrollDetection() {
     $('.place').each(function() {
@@ -43,3 +46,8 @@ var img = document.createElement("iframe");
   img.setAttribute("alt", "Video");
   document.getElementsByClassName("video-wrapper")[0].appendChild(img);
 }
+
+$('.list-btn').on('click', function(){
+    $('.side-bar-left').toggleClass('unfolded')
+    $('.arrow').toggleClass('rotate')
+})

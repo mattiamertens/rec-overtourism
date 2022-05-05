@@ -118,6 +118,10 @@ a {
 .column{
     flex-direction: column;
 }
+.btn-text{
+    font-family: Neue Machina regular;
+    font-size: 16px;
+}
 
 
 .topnav{
@@ -174,7 +178,7 @@ a {
     margin: 12% 0 0 10%;
     width: 80%;
     height: 75vh;
-    overflow: scroll
+    overflow: scroll;
 }
 .destinations::-webkit-scrollbar {
     display: none;
@@ -183,6 +187,7 @@ a {
     align-items: baseline;
     margin: 8% 0 0;
     padding-bottom: 30%;
+    cursor: url('cursor.svg'), auto;
 }
 .yellow-text{
     color: var(--yellow);
@@ -208,9 +213,72 @@ a {
     font-size: 36px;
 }
 .continent{
-    font-family: Neue Machina regular;
-    font-size: 16px;
+    /* mix-blend-mode: difference; */
+}
+.btn{
     border: 1px solid white;
     padding: 6px 18px 3px 18px;
     width: fit-content;
+}
+
+/* SINGLE LOCATIONS */
+
+.actual-content{
+    height: calc(100% - 48px);
+    width: 100%;
+    transform: translateY(48px);
+    display: flex;
+    align-items: flex-start;
+}
+.where{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.where span{
+    color: var(--yellow);
+}
+
+.buttons{
+    /* position: absolute; */
+    transform: translateY(42px);
+    width: 100%;
+    padding: 0 25px;
+}
+.list-btn{
+    border: 1px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.arrow{
+    margin-left: 12px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+.statistics-btn{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.side-bar-left{
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.side-bar-right{
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.unfolded{
+    width: 24%;
+}
+.rotate{
+    transform: rotate(180deg);
 }
