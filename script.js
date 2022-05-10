@@ -47,7 +47,23 @@ var img = document.createElement("iframe");
   document.getElementsByClassName("video-wrapper")[0].appendChild(img);
 }
 
+var txtToggle = true;
 $('.list-btn').on('click', function(){
-    $('.side-bar-left').toggleClass('unfolded')
-    $('.arrow').toggleClass('rotate')
+
+    if (txtToggle) {
+        this.innerHTML = "Hide list" + "<img src='../assets/arrow.svg' class='arrow'></img>";
+        $('.arrow').addClass('rotate')
+        txtToggle = false;
+
+    } else if (!txtToggle) {
+        this.innerHTML = "Show list" + "<img src='../assets/arrow.svg' class='arrow'></img>";
+        $('.arrow').removeClass('rotate')
+        txtToggle = true;
+    }
+    // toggle();
+    $('.sb-left').toggleClass('unfolded')
+})
+$('.statistics-btn').on('click', function(){
+    $('.sb-right').toggleClass('unfolded')
+    $(this).text('Hide statistics')
 })
