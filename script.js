@@ -9,10 +9,10 @@
 
 
 // DA RIATTIVARE
-// document.querySelector('.destinations').addEventListener('scroll', function(){
+document.querySelector('.destinations').addEventListener('scroll', function(){
 
-//     scrollDetection();
-// });
+    scrollDetection();
+});
 
 function scrollDetection() {
     $('.place').each(function() {
