@@ -403,3 +403,12 @@ a {
     width: 100%;
     position: absolute;
 }
+.marker {
+    background-image: url('../assets/pin.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+  }

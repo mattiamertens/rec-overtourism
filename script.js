@@ -68,3 +68,4 @@ $('.location').on('click', function(){
     // $('.location-dropdown').addClass('hidden')
     $(this).find('.check').toggleClass('vis')
 })
+
