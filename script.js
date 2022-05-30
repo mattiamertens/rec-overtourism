@@ -6,7 +6,18 @@
 //     $(this).children('.left-info').children('.header').children('.square').removeClass('on-screen');
 // })
 
-
+//Session storage for tutorial Waiting time
+$(document).ready(function () {
+    if (!window.sessionStorage.getItem("isExecuted")) {
+      window.sessionStorage.setItem("isExecuted", true);
+    }
+     else {
+      $('.popUp-index').addClass('hidden')
+    }
+});
+$('.close').on('click', function(){
+    $('.popUp-index').addClass('hidden')
+})
 
 
 

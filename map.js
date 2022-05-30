@@ -9,7 +9,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Venice'
+                description: 'Venice',
+                time: '431',
+                reason: 'RESIDENTS',
+                link: '../destinations/venice.html'
             }
         },
         {
@@ -20,7 +23,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Boracay'
+                description: 'Boracay',
+                time: '322',
+                reason: '',
+                link: '../destinations/boracay.html'
             }
         },
         {
@@ -31,7 +37,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Dubrovnik'
+                description: 'Dubrovnik',
+                time: '525',
+                reason: '',
+                link: '../destinations/dubrovnik.html'
             }
         },
             {
@@ -42,7 +51,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Maya Bay'
+                description: 'Maya Bay',
+                time: '283',
+                reason: '',
+                link: '../destinations/mayab.html'
             }
         },
         {
@@ -53,7 +65,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Cinque Terre'
+                description: 'Cinque Terre',
+                time: '243',
+                reason: '',
+                link: '../destinations/cinqueT.html'
             }
         },
         {
@@ -64,7 +79,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Santorini'
+                description: 'Santorini',
+                time: '96',
+                reason: '',
+                link: '../destinations/santorini.html'
             }
         },
         {
@@ -75,7 +93,24 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Mallorca'
+                description: 'Mallorca',
+                time: '87',
+                reason: '',
+                link: '../destinations/mallorca.html'
+            }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-72.5449493172292, -13.162508583930899]
+            },
+            properties: {
+                title: 'Mapbox',
+                description: 'Machu Pichu',
+                time: '235',
+                reason: '',
+                link: '../destinations/machuP.html'
             }
         },
         {
@@ -86,7 +121,10 @@ const geojson = {
             },
             properties: {
                 title: 'Mapbox',
-                description: 'Canyon'
+                description: 'Fjadrargljufur canyon',
+                time: '292',
+                reason: 'NATURE',
+                link: '../destinations/canyon.html'
             }
         }
     ]
@@ -95,10 +133,6 @@ for (const feature of geojson.features) {
     // create a HTML element for each feature
     const el = document.createElement('div');    
     el.className = 'marker';
-    
-    const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Construction on the Washington Monument began in 1848.'
-    );
 
     // make a marker for each feature and add to the map
     new mapboxgl.Marker(el, {anchor: 'bottom'}).setLngLat(feature.geometry.coordinates)
@@ -106,21 +140,8 @@ for (const feature of geojson.features) {
         .addTo(map);
 
     el.addEventListener('click', (e) => {
-        /* Fly to the point */
         flyToLocation(feature);
         createPopUp(feature)
-        /* Close all other popups and display popup for clicked store */
-        // createPopUp(marker);
-        /* Highlight listing in sidebar */
-        // const activeItem = document.getElementsByClassName('active');
-        // e.stopPropagation();
-        // if (activeItem[0]) {
-        //   activeItem[0].classList.remove('active');
-        // }
-        // const listing = document.getElementById(
-        //   `listing-${marker.properties.id}`
-        // );
-        // listing.classList.add('active');
     });
 }
 
@@ -140,9 +161,31 @@ function createPopUp(feature) {
     const popUps = document.getElementsByClassName('mapboxgl-popup');
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
+
+   
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    // var today  = new Date(); 
+    var myDate = new Date(new Date().getTime()+(`${feature.properties.time}`*24*60*60*1000));
+    var formatDate = myDate.toLocaleDateString("en-US", options);
   
-    const popup = new mapboxgl.Popup({ closeOnClick: false })
+    const popup = new mapboxgl.Popup({ closeOnClick: false, offset: 15 })
       .setLngLat(feature.geometry.coordinates)
-      .setHTML(`<h3>Sweetgreen</h3><h4>${feature.properties.description}</h4>`)
+      .setHTML(` <div class="popUp">
+        <div class="popUp-title">${feature.properties.description}</div>
+            <div class="waiting-time-big sans-bold">
+                    ${feature.properties.time} days <span>of waiting time</span>
+                <div class="next-spot sans-regular"> Next available spot on<span class="sans-bold"> ${formatDate} </span></div>
+                <div class="comparison-data">
+                    <div class="mono-bold">Enough time to:</div>
+                    Get a C2 in English starting from 0 and still have 98 days spare
+                </div>
+            </div>
+
+            <div class="popUp-footer flex-display-center-sb">
+                <a href="${feature.properties.link}" class="stream-button list-btn btn-text">Watch stream</a>
+                <div class="reason"> ${feature.properties.reason}</div>
+            </div>
+        </div>`)
+      .setMaxWidth("45%")
       .addTo(map);
 }
