@@ -149,6 +149,13 @@ a {
     font-size: 20px;
     color: var(--yellow) !important;
 }
+.scroll-cue{
+    position: absolute;
+    top:90%;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+}
 .link-section{
     display: flex;
     width: 25%;
@@ -411,4 +418,28 @@ a {
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
+.popUp{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    background-color: var(--grey);
+    width: 35%;
+    padding: 2%;
+}
+.popUp *{
+    color: black;
+}
+.popUp-title{
+    font-family: Suisse Intl bold;
+    margin-bottom: 9%;
+}
+.popUp-footer{
+    margin-top: 5%;
+}
+.stream-button{
+    border: 1px solid black;
+}
+.reason{
+    color: var(--yellow);
+}
