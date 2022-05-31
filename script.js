@@ -79,3 +79,16 @@ $('.location').on('click', function(){
     // $('.location-dropdown').addClass('hidden')
     $(this).find('.check').toggleClass('vis')
 })
+
+
+// SIMULATOR
+var slider = $(".actual-slider")[0];
+
+var output = $(".value")[0];
+output.innerHTML = slider.value;
+
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  console.log(slider.value) // valore 1
+}

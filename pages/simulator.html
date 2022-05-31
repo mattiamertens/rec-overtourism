@@ -24,47 +24,80 @@
         <a href="#" class="nav-item3">Simulator</a>
     </div>
 
-    <div class="section-title">Simulator</div>
-    <div class="simulator-wrapper">
-        <div class="sim-header">
-            <span> Filters: </span>
-            <span class="disclaimer">Calculate the impact your travel has on the choosen destination</span>
-        </div>
-        <div class="duration-section">
-            <div class="section-title">Duration (days):</div>
-            <div class="slider"></div>
-        </div>
+    <div class="content-wrapper-simulator">
+        <div class="page-title sans-bold">Simulator</div>
 
-        <div class="line"></div>
-
-        <div class="travelT-section">
-            <div class="section-title">Travel type:</div>
-            <div class="button-row">
-                <div class="stream-button list-btn btn-text">Domestic</div>
-                <div class="stream-button list-btn btn-text">Continental</div>
-                <div class="stream-button list-btn btn-text">Intercontinental</div>
+        <div class="simulator-wrapper">
+            <div class="sim-header flex-display-center-sb">
+                <div class="filter-header-title mono-bold"> Filters: </div>
+                <div class="disclaimer sans-regular">Calculate the impact your travel has on the choosen destination</div>
             </div>
-        </div>
-       
-        <div class="line"></div>
 
-        <div class="travelM-section">
-            <div class="section-title">Travel means:</div>
-            <div class="button-row">
-                <div class="stream-button list-btn btn-text">Car</div>
-                <div class="stream-button list-btn btn-text">Train/Bus</div>
-                <div class="stream-button list-btn btn-text">Plane</div>
+            <div class="duration-section flex-display-start-start column">
+                <div class="section-title mono-bold">Duration (days): <span class="value"></span> </div>
+                <div class="slider flex-display-center-center">
+                    1 <input type="range" min="1" max="30" value="15" class="actual-slider"> 30+ 
+                </div>
             </div>
-        </div>
 
-        <div class="line"></div>
+            <div class="sim-line"></div>
 
-        <div class="travelO-section">
-            <div class="section-title">Travel options:</div>
-            <div class="button-row">
-                <div class="stream-button list-btn btn-text">Car</div>
-                <div class="stream-button list-btn btn-text">Train/Bus</div>
-                <div class="stream-button list-btn btn-text">Plane</div>
+            <div class="travelT-section">
+                <div class="section-title mono-bold">Travel type:</div>
+                <div class="button-row flex-display-center-center">
+                    <div class="unselected-button list-btn btn-text flex-display-center-center">Domestic</div>
+                    <div class="unselected-button list-btn btn-text flex-display-center-center">International</div>
+                    <div class="unselected-button list-btn btn-text flex-display-center-center">Intercontinental</div>
+                </div>
+            </div>
+        
+            <div class="line"></div>
+
+            <div class="travelM-section">
+                <div class="section-title mono-bold">Travel means:</div>
+                <div class="button-row flex-display-center-center">
+                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                        <img src="../assets/car.svg" alt="car" class="travelM-icon">
+                        Car
+                    </div>
+                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                        <img src="../assets/train.svg" alt="train" class="travelM-icon">
+                        Train/Bus
+                    </div>
+                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                        <img src="../assets/plane.svg" alt="plane" class="travelM-icon">
+                        Plane
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="travelO-section">
+                <div class="section-title mono-bold">Travel options:</div>
+                <div class="inner-section">
+                    <div class="class">
+                        <div class="inner-section-content">
+                            <div class="inner-section-title">First class</div>
+                            <div class="inner-section-description">
+                                Services offered in first class are more damaging 
+                                to the environment also due to a higher amount of fuel burnt per passenger
+                            </div>
+                        </div>
+                        <div class="checkbox"></div>
+                    </div>
+                
+                    <div class="off-season">
+                        <div class="inner-section-content">
+                            <div class="inner-section-title">Travelling off-season</div>
+                            <div class="inner-section-description">
+                                Choosing off-peak dates allows a better and healthier distribution of the tourist flow
+                            </div>
+                        </div>
+                        <div class="checkbox"></div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

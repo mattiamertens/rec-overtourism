@@ -97,11 +97,11 @@ a {
     align-items: flex-start; /* all children on cross axis - vertical center*/
     justify-content: center; /* main axis of conatiner - H */
 }
-.flex-display-start-center{
+.flex-display-start-start{
     display: flex;
     align-content: flex-start; /* cross axis of container - V */
     align-items: flex-start; /* all children on cross axis - vertical center*/
-    justify-content: center; /* main axis of conatiner - H */
+    justify-content: start; /* main axis of conatiner - H */
 }
 .flex-display-sa-start{
     display: flex;
@@ -365,6 +365,7 @@ a {
 
 .location-wrapper{
     position: relative;
+    cursor: pointer;
 }
 .location-item{
     width: 100%;
@@ -467,4 +468,89 @@ a {
 }
 .reason{
     color: var(--yellow);
+}
+
+/* SIMULATOR */
+.content-wrapper-simulator{
+    padding: 0 25px;
+    width: 100vw;
+    transform: translateY(15%);
+}
+.content-wrapper-simulator *{
+    color: black;
+}
+.page-title{
+    font-size: 3rem;
+}
+.simulator-wrapper{
+    width: 70%;
+    margin: 5% auto 0;
+    padding: 1.8% 3%;
+    background-color: white;
+}
+.sim-header{
+    align-items: baseline;
+}
+.disclaimer{
+    color: var(--grey);
+    width: 35%;
+    text-align: end;
+}
+.sim-line{
+    background-color: var(--grey);
+    height: 1.5px;
+    width: 100%;
+    margin: 6% 0;
+}
+
+/* SLIDER SECTION */
+.duration-section{
+    margin-top: 8%;
+}
+.slider{
+    margin: 5% auto;
+    width: 75%;
+}
+.actual-slider{
+    width: 100%;
+    margin: -6% 3% 0;
+    -webkit-appearance: none;
+    height: 3px;
+    background: black;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.actual-slider:hover{
+    opacity: 1;
+}
+.actual-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* TRAVEL TYPE SECTION */
+.button-row{
+    margin: 4% 0;
+}
+.unselected-button{
+    border: 1px solid var(--grey);
+    margin: 0 3%;
+    width: 158px;
+}
+
+
+/* TRAVEL MEANS SECTION */
+.travelM-button{
+    height: 120px;
+    justify-content: space-between;
+    padding: 14px 14px 17px;
+}
+.travelM-icon{
+    width: 30px;
 }
