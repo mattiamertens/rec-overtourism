@@ -49,7 +49,7 @@ function scrollDetection() {
 
 
 var txtToggle = true;
-$('.list-btn').on('click', function(){
+$('.animated-btn').on('click', function(){
 
     if (txtToggle) {
         this.innerHTML = "Hide list" + "<img src='../assets/arrow.svg' class='arrow'></img>";
@@ -86,8 +86,21 @@ var slider = $(".actual-slider")[0];
 var output = $(".value")[0];
 output.innerHTML = slider.value;
 
-
 slider.oninput = function() {
   output.innerHTML = this.value;
   console.log(slider.value) // valore 1
 }
+
+$('.unselected-button').on('click', function(){
+    $(this).addClass('selected-btn');
+    $(this).siblings().removeClass('selected-btn');
+})
+$('.reset').on('click', function(){
+    $('.unselected-button').removeClass('selected-btn')
+
+    document.getElementById("checky").checked = false;
+    document.getElementById("checky2").checked = false;
+
+    slider.value = 15;
+    output.innerHTML = 15;
+})

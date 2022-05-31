@@ -30,7 +30,7 @@
         <div class="simulator-wrapper">
             <div class="sim-header flex-display-center-sb">
                 <div class="filter-header-title mono-bold"> Filters: </div>
-                <div class="disclaimer sans-regular">Calculate the impact your travel has on the choosen destination</div>
+                <div class="disclaimer sans-regular">Calculate the impact your travel has on a choosen destination</div>
             </div>
 
             <div class="duration-section flex-display-start-start column">
@@ -45,9 +45,9 @@
             <div class="travelT-section">
                 <div class="section-title mono-bold">Travel type:</div>
                 <div class="button-row flex-display-sb-center">
-                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">Domestic</div>
-                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">International</div>
-                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">Intercontinental</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">Domestic</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">International</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">Intercontinental</div>
                 </div>
             </div>
         
@@ -56,15 +56,15 @@
             <div class="travelM-section">
                 <div class="section-title mono-bold">Travel means:</div>
                 <div class="button-row flex-display-sb-center">
-                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
                         <img src="../assets/car.svg" alt="car" class="travelM-icon">
                         Car
                     </div>
-                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
                         <img src="../assets/train.svg" alt="train" class="travelM-icon">
                         Train/Bus
                     </div>
-                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
                         <img src="../assets/plane.svg" alt="plane" class="travelM-icon">
                         Plane
                     </div>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="checkbox">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" id="checky">
                                 <span class="checkbox-slider"></span>
                             </label>
                         </div>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="checkbox">
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" id="checky2">
                                 <span class="checkbox-slider pointer"></span>
                             </label>
                         </div>
@@ -112,8 +112,18 @@
             <div class="sim-line"></div>
 
             <div class="button-section flex-display-sb-center">
-                <div class="reset underlined sans-regular">Reset choices</div>
-                <div class="unselected-button list-btn pointer btn-text flex-display-center-center">Calculate impact</div>
+                <div class="reset pointer underlined sans-regular">Reset choices</div>
+                <div class="primary-btn pointer list-btn btn-text sans-regular flex-display-center-center">Calculate impact</div>
+            </div>
+
+        </div>
+        <div class="results-section">
+            <div class="section-title mono-bold">Your travel means:</div>
+            <div class="results-wrapper flex-display-sb-center">
+                <div class="waiting-time-big sans-bold">
+                    322 days <span class="sans-regular">of waiting time for others!</span>                        
+                </div>
+                <div class="what-u-can-do underlined sans-regular pointer">See what you can do</div>
             </div>
         </div>
     </div>

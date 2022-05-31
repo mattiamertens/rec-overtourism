@@ -125,7 +125,6 @@ a {
     flex-direction: column;
 }
 .btn-text{
-    font-family: Neue Machina regular;
     font-size: 16px;
 }
 .underlined{
@@ -628,4 +627,30 @@ input:checked + .checkbox-slider:before {
 /* BUTTON SECTION */
 .button-section{
     padding: 4% 0;
+}
+.disabled{
+    border: 1px solid var(--grey);
+    color: var(--grey);
+}
+.primary-btn{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+/* ANIMATIONS */
+.selected-btn{
+    border: 1px solid black;
+}
+
+
+/* RESULTS */
+.results-section{
+    background-color: var(--yellow);
+    width: 70%;
+    margin: 0 auto;
+    padding: 2% 5%;
+}
+.results-wrapper{
+    margin: 4% auto;
+    align-items: baseline;
 }
