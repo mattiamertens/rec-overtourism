@@ -61,7 +61,6 @@ $('.list-btn').on('click', function(){
         $('.arrow').removeClass('rotate')
         txtToggle = true;
     }
-    // toggle();
     $('.sb-left').toggleClass('unfolded')
 })
 $('.statistics-btn').on('click', function(){

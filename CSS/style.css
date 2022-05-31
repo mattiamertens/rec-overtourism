@@ -128,6 +128,12 @@ a {
     font-family: Neue Machina regular;
     font-size: 16px;
 }
+.underlined{
+    text-decoration: underline;
+}
+.pointer{
+    cursor: pointer;
+}
 
 
 .topnav{
@@ -163,7 +169,6 @@ a {
 .close{
     margin-bottom: 9%;
     font-size: 1.1rem;
-    cursor: pointer;
 }
 .scroll-cue{
     position: absolute;
@@ -279,7 +284,6 @@ a {
 .list-btn{
     border: 1px solid white;
     padding: 6px 12px;
-    cursor: pointer;
 }
 .arrow{
     margin-left: 12px;
@@ -287,8 +291,7 @@ a {
     transition: all .4s ease;
 }
 .statistics-btn{
-    text-decoration: underline;
-    cursor: pointer;
+    /* text-decoration: underline; */
 }
 
 .side-bar{
@@ -365,7 +368,6 @@ a {
 
 .location-wrapper{
     position: relative;
-    cursor: pointer;
 }
 .location-item{
     width: 100%;
@@ -536,12 +538,16 @@ a {
 
 /* TRAVEL TYPE SECTION */
 .button-row{
-    margin: 4% 0;
+    margin: 4% auto;
+    width: 80%;
 }
 .unselected-button{
     border: 1px solid var(--grey);
-    margin: 0 3%;
-    width: 158px;
+    width: 26%;
+    min-width: 160px;
+}
+.unselected-button:nth-child(2){
+    margin: 0 4%;
 }
 
 
@@ -551,6 +557,75 @@ a {
     justify-content: space-between;
     padding: 14px 14px 17px;
 }
+.travelM-button:focus{
+    border: 1px solid black;
+}
 .travelM-icon{
     width: 30px;
+}
+
+/* TRAVEL MEANS OPTIONS */
+.inner-section{
+    margin: 4% auto;
+    width: 80%;
+    height: 200px;
+    align-items: stretch;
+}
+.inner-section-content{
+    width: 70%;
+}
+.inner-section-title{
+    font-size: 22px;
+    line-height: 28px;
+}
+.inner-section-description{
+    font-size: 14px;
+    color: var(--grey);
+}
+
+/* CHECKBOX SHIT */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkbox-slider {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.checkbox-slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+input:checked + .checkbox-slider {
+    background-color: black;
+}
+input:checked + .checkbox-slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* BUTTON SECTION */
+.button-section{
+    padding: 4% 0;
 }

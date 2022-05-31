@@ -44,60 +44,76 @@
 
             <div class="travelT-section">
                 <div class="section-title mono-bold">Travel type:</div>
-                <div class="button-row flex-display-center-center">
-                    <div class="unselected-button list-btn btn-text flex-display-center-center">Domestic</div>
-                    <div class="unselected-button list-btn btn-text flex-display-center-center">International</div>
-                    <div class="unselected-button list-btn btn-text flex-display-center-center">Intercontinental</div>
+                <div class="button-row flex-display-sb-center">
+                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">Domestic</div>
+                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">International</div>
+                    <div class="unselected-button pointer list-btn btn-text flex-display-center-center" data-attr=" ">Intercontinental</div>
                 </div>
             </div>
         
-            <div class="line"></div>
+            <div class="sim-line"></div>
 
             <div class="travelM-section">
                 <div class="section-title mono-bold">Travel means:</div>
-                <div class="button-row flex-display-center-center">
-                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                <div class="button-row flex-display-sb-center">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
                         <img src="../assets/car.svg" alt="car" class="travelM-icon">
                         Car
                     </div>
-                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
                         <img src="../assets/train.svg" alt="train" class="travelM-icon">
                         Train/Bus
                     </div>
-                    <div class="unselected-button travelM-button stream-button btn-text flex-display-start-center column">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text flex-display-start-center column" data-attr=" ">
                         <img src="../assets/plane.svg" alt="plane" class="travelM-icon">
                         Plane
                     </div>
                 </div>
             </div>
 
-            <div class="line"></div>
+            <div class="sim-line"></div>
 
             <div class="travelO-section">
                 <div class="section-title mono-bold">Travel options:</div>
-                <div class="inner-section">
-                    <div class="class">
+                <div class="inner-section flex-display-center-sb column">
+                    <div class="class flex-display-sb-center">
                         <div class="inner-section-content">
-                            <div class="inner-section-title">First class</div>
-                            <div class="inner-section-description">
+                            <div class="inner-section-title sans-regular">First class</div>
+                            <div class="inner-section-description sans-regular">
                                 Services offered in first class are more damaging 
                                 to the environment also due to a higher amount of fuel burnt per passenger
                             </div>
                         </div>
-                        <div class="checkbox"></div>
+                        <div class="checkbox">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="checkbox-slider"></span>
+                            </label>
+                        </div>
                     </div>
                 
-                    <div class="off-season">
+                    <div class="off-season flex-display-sb-center">
                         <div class="inner-section-content">
-                            <div class="inner-section-title">Travelling off-season</div>
-                            <div class="inner-section-description">
-                                Choosing off-peak dates allows a better and healthier distribution of the tourist flow
+                            <div class="inner-section-title sans-regular">Travelling off-season</div>
+                            <div class="inner-section-description sans-regular">
+                                Choosing off-peak dates allows a better and healthier distribution of&nbsp;the tourist flow
                             </div>
                         </div>
-                        <div class="checkbox"></div>
+                        <div class="checkbox">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="checkbox-slider pointer"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
+            </div>
+
+            <div class="sim-line"></div>
+
+            <div class="button-section flex-display-sb-center">
+                <div class="reset underlined sans-regular">Reset choices</div>
+                <div class="unselected-button list-btn pointer btn-text flex-display-center-center">Calculate impact</div>
             </div>
         </div>
     </div>
