@@ -648,7 +648,8 @@ input:checked + .checkbox-slider:before {
     background-color: var(--yellow);
     width: 70%;
     margin: 0 auto;
-    padding: 2% 5%;
+    padding: 2% 3%;
+    transition: all 0.3s ease;
 }
 .results-wrapper{
     margin: 4% auto;

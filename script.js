@@ -104,3 +104,7 @@ $('.reset').on('click', function(){
     slider.value = 15;
     output.innerHTML = 15;
 })
+
+$('#calculator').on('click', function(){
+    $('.results-section').removeClass('hidden')
+})
