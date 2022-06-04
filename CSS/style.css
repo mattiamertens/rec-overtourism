@@ -475,17 +475,18 @@ a {
 .content-wrapper-simulator{
     padding: 0 25px;
     width: 100vw;
-    transform: translateY(15%);
+    transform: translateY(15vh);
 }
 .content-wrapper-simulator *{
     color: black;
 }
 .page-title{
     font-size: 3rem;
+    width: 40%;
 }
 .simulator-wrapper{
     width: 70%;
-    margin: 5% auto 0;
+    margin: 5% auto 0%;
     padding: 1.8% 3%;
     background-color: white;
 }
@@ -654,4 +655,35 @@ input:checked + .checkbox-slider:before {
 .results-wrapper{
     margin: 4% auto;
     align-items: baseline;
+}
+
+/* GOOD PRACTICES */
+.high-section{
+    height: 100vh;
+}
+.good-practices{
+    margin: 10% 0;
+}
+.card-wrapper{
+    width: 45%;
+    /* height: 50%; */
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 45%;
+    height: 140px;
+    padding: 3% 4%;
+    margin: 4% 0;
+    border-radius: 14px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+}
+.nmbr{
+    font-size: 32px;
+}
+.txt-card{
+    font-size: 1rem;
+}
+.txt-explanation{
+    width: 40%;
 }

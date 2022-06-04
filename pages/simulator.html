@@ -30,7 +30,7 @@
         <div class="simulator-wrapper">
             <div class="sim-header flex-display-center-sb">
                 <div class="filter-header-title mono-bold"> Filters: </div>
-                <div class="disclaimer sans-regular">Calculate the impact your travel has on a choosen destination</div>
+                <div class="disclaimer sans-regular">Calculate the impact your travel <br> has on a choosen destination</div>
             </div>
 
             <div class="duration-section flex-display-start-start column">
@@ -45,9 +45,9 @@
             <div class="travelT-section">
                 <div class="section-title mono-bold">Travel type:</div>
                 <div class="button-row flex-display-sb-center">
-                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">Domestic</div>
-                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">International</div>
-                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center" data-attr=" ">Intercontinental</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center tT-button" data-attr="1.4">Domestic</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center tT-button" data-attr="1.8">International</div>
+                    <div class="unselected-button pointer list-btn btn-text sans-regular flex-display-center-center tT-button" data-attr="2.1">Intercontinental</div>
                 </div>
             </div>
         
@@ -56,15 +56,15 @@
             <div class="travelM-section">
                 <div class="section-title mono-bold">Travel means:</div>
                 <div class="button-row flex-display-sb-center">
-                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column tM-button" data-attr="3.1">
                         <img src="../assets/car.svg" alt="car" class="travelM-icon">
                         Car
                     </div>
-                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column tM-button" data-attr="1.2">
                         <img src="../assets/train.svg" alt="train" class="travelM-icon">
                         Train/Bus
                     </div>
-                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column" data-attr=" ">
+                    <div class="unselected-button pointer travelM-button stream-button btn-text sans-regular flex-display-start-center column tM-button" data-attr="4.5">
                         <img src="../assets/plane.svg" alt="plane" class="travelM-icon">
                         Plane
                     </div>
@@ -120,13 +120,64 @@
         <div class="results-section hidden">
             <div class="section-title mono-bold">Your travel means:</div>
             <div class="results-wrapper flex-display-sb-center">
-                <div class="waiting-time-big sans-bold">
-                    322 days <span class="sans-regular">of waiting time for others!</span>                        
+                <div class="waiting-time-big sans-bold" id="result-nmbr">
+                    <!-- X days <span class="sans-regular">of waiting time for others!</span> -->
                 </div>
                 <div class="what-u-can-do underlined sans-regular pointer">See what you can do</div>
             </div>
         </div>
+
+        <div class="good-practices high-section flex-display-sb-center">
+            <div class="page-title sans-bold">Good practices to reduce the impact</div>
+            <div class="card-wrapper flex-display-sb-center">
+                <div class="card">
+                    <div class="nmbr sans-bold">1.</div>
+                    <div class="txt-card sans-regular">
+                        Get off the beaten path and avoid tourist traps, 
+                        don’t explore the same bucket list destination as everyone
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="nmbr sans-bold">2.</div>
+                    <div class="txt-card sans-regular">
+                        Don’t plan an overpacked itinerary, try to slow down and enjoy less location for longer
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="nmbr sans-bold">3.</div>
+                    <div class="txt-card sans-regular">Choose the most sustainable transportation mean, like trains or buses</div>
+                </div>
+                <div class="card">
+                    <div class="nmbr sans-bold">4.</div>
+                    <div class="txt-card sans-regular">Respect the locals and their communities. Residents are what make the location worthy</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="why high-section flex-display-sb-center">
+            <div class="page-title sans-bold">Why <br> overtourism</div>
+            <div class="txt-explanation sans-regular">
+                Access to various locations in the last two years has been limited, and not only for health reasons. 
+                There are locations that had to close due to overtourism, fuelled by TV-shows, movies and Instagram 
+                posts, and not sustainable practices which eventually exceeded the foreseen <a href="https://en.wikipedia.org/wiki/Tourism_carrying_capacity" class="sans-bold underlined"> tourism carrying capacity</a>. 
+                Now these places need a certain amount of recovery time, without any tourists, and before reopening 
+                different policies are being enforced to limit the amount of visitors and to shelter the ecosystem.
+            </div>
+        </div>
+        
+        <div class="why high-section flex-display-sb-center">
+            <div class="page-title sans-bold">Why <br> overtourism</div>
+            <div class="txt-explanation sans-regular">
+                Access to various locations in the last two years has been limited, and not only for health reasons. 
+                There are locations that had to close due to overtourism, fuelled by TV-shows, movies and Instagram 
+                posts, and not sustainable practices which eventually exceeded the foreseen <a href="https://en.wikipedia.org/wiki/Tourism_carrying_capacity" class="sans-bold underlined"> tourism carrying capacity</a>. 
+                Now these places need a certain amount of recovery time, without any tourists, and before reopening 
+                different policies are being enforced to limit the amount of visitors and to shelter the ecosystem.
+            </div>
+        </div>
+
     </div>
+
 
 
 

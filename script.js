@@ -88,7 +88,7 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-  console.log(slider.value) // valore 1
+  console.log(slider.value) // valore 1 - slider
 }
 
 $('.unselected-button').on('click', function(){
@@ -105,6 +105,52 @@ $('.reset').on('click', function(){
     output.innerHTML = 15;
 })
 
+
+var d = slider.value;
+    var tT = 0;
+    var tM = 0;
+    var Fc = 0;
+    var oS = 0;
+
+// TRAVEL TYPE
+$('.tT-button').on('click', function(){
+    tT = this.getAttribute('data-attr')
+    console.log(tT);
+});
+
+// TRAVEL MEANS
+$('.tM-button').on('click', function(){
+    var tM = this.getAttribute('data-attr')
+    console.log(tM);
+});
+
+$('#checky').on('click', function(){
+    console.log(this.checked)
+    
+})
+
+function validate() {
+
+    if ($('#checky').checked) {
+        Fc = 7;
+        console.log(Fc);
+    } else {
+       alert('calrmo')
+    }
+}
+
+
+// FORMULA
 $('#calculator').on('click', function(){
+
+    validate()
+    console.log(tT);
+
+    var formula = 1*d*tT*(Fc + oS) + tM;
+    console.log(formula);
+
+    // $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
     $('.results-section').removeClass('hidden')
 })
+
+
