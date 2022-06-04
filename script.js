@@ -82,7 +82,7 @@ $('.location').on('click', function(){
 
 // SIMULATOR
 var slider = $(".actual-slider")[0];
-var d = 0;
+var d = 1.3;
 
 var output = $(".value")[0];
 output.innerHTML = slider.value;
@@ -148,7 +148,7 @@ $('#checky2').on('click', function(){
     var offSC = this.checked
     console.log(offSC)
     
-    oS = offSC ? 1.5 : 1;
+    oS = offSC ? 1 : 2;
     console.log(oS)
 })
 
@@ -156,7 +156,7 @@ $('#checky2').on('click', function(){
 // FORMULA
 $('#calculator').on('click', function(){
 
-    var formula = 1*d*tT* (Fc + oS) + tM;
+    var formula = Math.round(1*d*tT* (Fc + oS) + tM);
     console.log(formula);
 
     $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
