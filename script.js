@@ -82,13 +82,27 @@ $('.location').on('click', function(){
 
 // SIMULATOR
 var slider = $(".actual-slider")[0];
+var d = 0;
 
 var output = $(".value")[0];
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-  console.log(slider.value) // valore 1 - slider
+
+  if (slider.value <= 3) {
+      d = 3;
+  } 
+  else if (slider.value >= 4 && slider.value <=7) {
+    d = 2.2;
+  }
+  else if (slider.value >= 8 && slider.value <= 14){
+    d = 1.6;
+  }
+  else{
+    d = 1.3;
+  }
+  console.log(d)
 }
 
 $('.unselected-button').on('click', function(){
@@ -105,12 +119,10 @@ $('.reset').on('click', function(){
     output.innerHTML = 15;
 })
 
-
-var d = slider.value;
-    var tT = 0;
-    var tM = 0;
-    var Fc = 0;
-    var oS = 0;
+var tT = 0;
+var tM = 0;
+var Fc = 1;
+var oS = 1;
 
 // TRAVEL TYPE
 $('.tT-button').on('click', function(){
@@ -125,31 +137,29 @@ $('.tM-button').on('click', function(){
 });
 
 $('#checky').on('click', function(){
-    console.log(this.checked)
+    var firstCC = this.checked
+    console.log(firstCC)
     
+    Fc = firstCC ? 7 : 1;
+    console.log(Fc)
 })
 
-function validate() {
-
-    if ($('#checky').checked) {
-        Fc = 7;
-        console.log(Fc);
-    } else {
-       alert('calrmo')
-    }
-}
+$('#checky2').on('click', function(){
+    var offSC = this.checked
+    console.log(offSC)
+    
+    oS = offSC ? 1.5 : 1;
+    console.log(oS)
+})
 
 
 // FORMULA
 $('#calculator').on('click', function(){
 
-    validate()
-    console.log(tT);
-
-    var formula = 1*d*tT*(Fc + oS) + tM;
+    var formula = 1*d*tT* (Fc + oS) + tM;
     console.log(formula);
 
-    // $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
+    $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
     $('.results-section').removeClass('hidden')
 })
 
