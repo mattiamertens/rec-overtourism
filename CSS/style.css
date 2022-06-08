@@ -196,9 +196,10 @@ a {
    height: 100vh;
    width: 100vw;
 }
-.video-wrapper iframe{
+.player{
     height: 100%;
     width: 100%;
+    object-fit: fill;
 }
 .video-wrapper img{
     height: 100%;
