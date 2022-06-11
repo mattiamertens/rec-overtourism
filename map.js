@@ -12,7 +12,8 @@ const geojson = {
                 description: 'Venice',
                 time: '431',
                 reason: 'RESIDENTS',
-                link: '../destinations/venice.html'
+                link: '../destinations/venice.html',
+                enough_to: 'Get a C2 in English starting from 0 and still have 98 days spare'
             }
         },
         {
@@ -24,9 +25,10 @@ const geojson = {
             properties: {
                 title: 'Mapbox',
                 description: 'Boracay',
-                time: '322',
+                time: '443',
                 reason: '',
-                link: '../destinations/boracay.html'
+                link: '../destinations/boracay.html',
+                enough_to: "Walk twice the world's longest route and still have 69 days spare"
             }
         },
         {
@@ -40,7 +42,8 @@ const geojson = {
                 description: 'Dubrovnik',
                 time: '525',
                 reason: '',
-                link: '../destinations/dubrovnik.html'
+                link: '../destinations/dubrovnik.html',
+                enough_to: 'Fly the Rover to Mars, get back and still have 105 days spare'
             }
         },
             {
@@ -54,7 +57,8 @@ const geojson = {
                 description: 'Maya Bay',
                 time: '283',
                 reason: '',
-                link: '../destinations/mayab.html'
+                link: '../destinations/mayab.html',
+                enough_to: 'Give birth and still have 13 days spare'
             }
         },
         {
@@ -68,7 +72,8 @@ const geojson = {
                 description: 'Cinque Terre',
                 time: '243',
                 reason: '',
-                link: '../destinations/cinqueT.html'
+                link: '../destinations/cinqueT.html',
+                enough_to: 'Get a B2 in English starting from 0 and still have 101 days spare'
             }
         },
         {
@@ -82,7 +87,8 @@ const geojson = {
                 description: 'Santorini',
                 time: '96',
                 reason: '',
-                link: '../destinations/santorini.html'
+                link: '../destinations/santorini.html',
+                enough_to: 'Fly around the globe 50 times and still have 1 day spare'
             }
         },
         {
@@ -96,7 +102,8 @@ const geojson = {
                 description: 'Mallorca',
                 time: '87',
                 reason: '',
-                link: '../destinations/mallorca.html'
+                link: '../destinations/mallorca.html',
+                enough_to: 'Film the movie "Around the world in 80 days" and still have 30 days spare'
             }
         },
         {
@@ -110,7 +117,8 @@ const geojson = {
                 description: 'Machu Pichu',
                 time: '235',
                 reason: '',
-                link: '../destinations/machuP.html'
+                link: '../destinations/machuP.html',
+                enough_to: "Walk the world's longest route and still have 53 days spare"
             }
         },
         {
@@ -124,7 +132,8 @@ const geojson = {
                 description: 'Fjadrargljufur canyon',
                 time: '292',
                 reason: 'NATURE',
-                link: '../destinations/canyon.html'
+                link: '../destinations/canyon.html',
+                enough_to: 'Fly the Rover to Mars, get back and still have 82 days spare'
             }
         }
     ]
@@ -164,7 +173,6 @@ function createPopUp(feature) {
 
    
     var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    // var today  = new Date(); 
     var myDate = new Date(new Date().getTime()+(`${feature.properties.time}`*24*60*60*1000));
     var formatDate = myDate.toLocaleDateString("en-US", options);
   
@@ -177,7 +185,7 @@ function createPopUp(feature) {
                 <div class="next-spot sans-regular"> Next available spot on<span class="sans-bold"> ${formatDate} </span></div>
                 <div class="comparison-data">
                     <div class="mono-bold">Enough time to:</div>
-                    Get a C2 in English starting from 0 and still have 98 days spare
+                    ${feature.properties.enough_to}
                 </div>
             </div>
 
@@ -189,3 +197,7 @@ function createPopUp(feature) {
       .setMaxWidth("45%")
       .addTo(map);
 }
+// map.on('click', function(){
+//     popup.remove();
+//     alert('aa')
+// })

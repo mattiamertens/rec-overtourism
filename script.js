@@ -47,7 +47,7 @@ function scrollDetection() {
 }
 
 
-
+// SIDEBAR TOGGLING
 var txtToggle = true;
 $('.animated-btn').on('click', function(){
 
@@ -63,9 +63,20 @@ $('.animated-btn').on('click', function(){
     }
     $('.sb-left').toggleClass('unfolded')
 })
+
+var statsToggle = true;
+
 $('.statistics-btn').on('click', function(){
-    $('.sb-right').toggleClass('unfolded')
-    $(this).text('Hide statistics')
+    if (statsToggle){
+        $('.sb-right').addClass('unfolded')
+        $(this).text('Hide statistics')
+        statsToggle = false;
+
+    } else if (!statsToggle) {
+        $('.sb-right').removeClass('unfolded')
+        $(this).text('See statistics')
+        statsToggle = true;
+    }
 })
 
 // SINGLE CAMERA STREAM
