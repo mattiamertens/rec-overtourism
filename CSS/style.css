@@ -737,3 +737,7 @@ input:checked + .checkbox-slider:before {
     font-size: 40px;
     color: black;
 }
+.noBW{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); 
+}

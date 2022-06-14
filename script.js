@@ -90,6 +90,18 @@ $('.location').on('click', function(){
     $(this).find('.check').toggleClass('vis')
 })
 
+// CAMERA STREAMS
+
+$('.single-stream-card').on('mouseover', function(){
+    $(this).find('.player-single-str').addClass('noBW')
+}).on('mouseleave', function(){
+    $(this).find('.player-single-str').removeClass('noBW') 
+})
+
+
+
+
+
 
 // SIMULATOR
 var slider = $(".actual-slider")[0];
@@ -173,5 +185,3 @@ $('#calculator').on('click', function(){
     $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
     $('.results-section').removeClass('hidden')
 })
-
-
