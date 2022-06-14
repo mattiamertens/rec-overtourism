@@ -4,6 +4,10 @@ document.querySelector('.destinations').addEventListener('scroll', function(){
   $('.scroll-cue').css('visibility', 'hidden')
 });
 
+document.querySelector('.destinations').addEventListener('scroll', function(){
+  // scrollDetection();
+});
+
 
 // window.onload = function() {
 //   var img = document.createElement("video");

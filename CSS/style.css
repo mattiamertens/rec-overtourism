@@ -405,6 +405,9 @@ a {
 .graph-wrapper{
     margin: 64px 0 24px;
 }
+.axes {
+
+}
 .ax-x{
     height: 180px;
     width: 1px;
@@ -416,6 +419,11 @@ a {
     height: 1px;
     background-color: white;
     transform: translateX(-5%);
+}
+.first-bar{
+    width: 50%;
+    height: 30px;
+    background-color: white;
 }
 
 /* MAP */

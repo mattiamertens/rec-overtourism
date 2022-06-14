@@ -31,7 +31,7 @@
         </div>
         <div class="waiting-time-big sans-bold">
             322 days <span>of waiting time</span>
-            <div class="next-spot sans-regular"> Next available spot on<span class="sans-bold"> April 3rd 2023</span></div>
+            <div class="next-spot sans-regular"> Next available spot on <span class="sans-bold data-holder"></span></div>
             <div class="comparison-data">
                 Through the website you will encounter many times this statistic. This number has been calculated for each 
                 destination based on different factors as the <span class="mono-bold"> tourism carrying capacity</span>, <span class="mono-bold"> number of residents </span> and <span class="mono-bold"> number of yearly 
@@ -73,7 +73,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">ASIA</div>
                     </div>
 
-                    <div class="reason">HISTORIC</div>
+                    <div class="reason">POLLUTION</div>
                 </div>
             </a>
            
@@ -87,7 +87,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">EUROPE</div>
                     </div>
 
-                    <div class="reason">HISTORIC</div>
+                    <div class="reason">RESIDENTS</div>
                 </div>
             </a>
 
@@ -101,7 +101,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">ASIA</div>
                     </div>
 
-                    <div class="reason">HISTORIC</div>
+                    <div class="reason">NATURE</div>
                 </div>
             </a>
 
@@ -129,7 +129,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">EUROPE</div>
                     </div>
 
-                    <div class="reason">HISTORIC</div>
+                    <div class="reason">SOCIAL MEDIA</div>
                 </div>
             </a>
 
@@ -157,7 +157,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">EUROPE</div>
                     </div>
 
-                    <div class="reason">HISTORIC</div>
+                    <div class="reason">RESIDENTS</div>
                 </div>
             </a>
 
@@ -171,7 +171,7 @@
                         <div class="continent btn btn-text sans-regular flex-display-center-center">EUROPE</div>
                     </div>
 
-                    <div class="reason">NATURAL</div>
+                    <div class="reason">NATURE</div>
                 </div>
             </a>
             
@@ -197,9 +197,11 @@
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="main.js"></script>
 <script>
-    document.querySelector('.destinations').addEventListener('scroll', function(){
-    scrollDetection();
-    });
+    // DATE CALCULATOR FOR SINGLE DESTINATIONS
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    var myDate = new Date(new Date().getTime()+(322*24*60*60*1000));
+    var formatDate = myDate.toLocaleDateString("en-US", options);
+    $('.data-holder').html(formatDate)
 </script>
 </body>
 </html>

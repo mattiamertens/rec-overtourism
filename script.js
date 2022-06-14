@@ -19,29 +19,27 @@ $('.close').on('click', function(){
     $('.popUp-index').addClass('hidden')
 })
 
-
+$(document).ready(scrollDetection());
 
 function scrollDetection() {
     $('.place').each(function() {
 
         var offset = this.getBoundingClientRect().top;
-        if (offset < 300 && offset > 120){
-            // console.log(this)
-        }
-    
-        if(offset < 530 && offset > 120){ 
+
+        
+        if (offset < 300 && offset > 120){ 
           $(this).find('.destination-title').addClass('yellow-text')
           $(this).find('.square').addClass('on-screen');
-          $(this).data('')
           var dataSource = this.getAttribute('data-attr')
-          console.log(dataSource)
 
           $('.player').attr('src', dataSource)
+          console.log('uno')
         }
         
-        else{
+        else {
             $(this).find('.destination-title').removeClass('yellow-text')
             $(this).find('.square').removeClass('on-screen');
+            console.log('due')
         }
     })
 }
