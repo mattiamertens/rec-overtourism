@@ -91,9 +91,12 @@ $('.location').on('click', function(){
 // CAMERA STREAMS
 
 $('.single-stream-card').on('mouseover', function(){
-    $(this).find('.player-single-str').addClass('noBW')
+    $(this).find('.player-single-str').addClass('noBW');
+    $(this).find('.location-name, .waiting-time-big').removeClass('hidden');
+
 }).on('mouseleave', function(){
-    $(this).find('.player-single-str').removeClass('noBW') 
+    $(this).find('.player-single-str').removeClass('noBW')
+    $(this).find('.location-name, .waiting-time-big').addClass('hidden'); 
 })
 
 
@@ -183,3 +186,4 @@ $('#calculator').on('click', function(){
     $('#result-nmbr').html(formula + " days <span class='sans-regular'>of waiting time for others!</span>")
     $('.results-section').removeClass('hidden')
 })
+

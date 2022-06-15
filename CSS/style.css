@@ -62,6 +62,7 @@
     font-family: var(--mono-font);
     font-size: 0.92rem;
     color: white;
+    scroll-behavior: smooth;
     /* cursor: url('cursor.svg'), auto; */
 }
 body{
@@ -702,6 +703,16 @@ input:checked + .checkbox-slider:before {
     margin: 4% 0;
     border-radius: 14px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+.tour-op-icon{
+    position: absolute;
+    right: 3%;
+    color: yellow;
+    font-size: 18px;
+}
+.tour-op-sig{
+    color: yellow;
 }
 .nmbr{
     font-size: 32px;
@@ -711,6 +722,19 @@ input:checked + .checkbox-slider:before {
 }
 .txt-explanation{
     width: 40%;
+}
+
+.damages-wrapper{
+    height: 10vh;
+    width: 100%;
+}
+.damage{
+    border: 1px solid black;
+    padding: 1% 1.5%;
+}
+.inner-expl{
+    margin-bottom: 10%;
+    font-family: inherit;
 }
 
 
