@@ -251,9 +251,7 @@ a {
 .destination-title{
     font-size: 36px;
 }
-.continent{
-    /* mix-blend-mode: difference; */
-}
+
 .btn{
     border: 1px solid white;
     padding: 6px 18px 3px 18px;
@@ -410,9 +408,6 @@ a {
 .graph-wrapper{
     margin: 64px 0 24px;
     position: relative;
-}
-.axes {
-    
 }
 .ax-x{
     height: 180px;
