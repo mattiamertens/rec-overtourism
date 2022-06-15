@@ -1,11 +1,3 @@
-// $('.place').on('mouseenter', function(){
-//     $(this).children('.left-info').children('.header').children('.destination-title').addClass('yellow-text');
-//     $(this).children('.left-info').children('.header').children('.square').addClass('on-screen');
-// }).on('mouseleave', function(){
-//     $(this).children('.left-info').children('.header').children('.destination-title').removeClass('yellow-text')
-//     $(this).children('.left-info').children('.header').children('.square').removeClass('on-screen');
-// })
-
 //Session storage for tutorial Waiting time
 $(document).ready(function () {
     if (!window.sessionStorage.getItem("isExecuted")) {
@@ -19,27 +11,71 @@ $('.close').on('click', function(){
     $('.popUp-index').addClass('hidden')
 })
 
-$(document).ready(scrollDetection());
+
+
+document.querySelector('.destinations').addEventListener('scroll', function(){
+    // scrollDetection();
+    $('.scroll-cue').css('visibility', 'hidden')
+  
+  
+  
+    // $(".place").each(function(){
+    //     $.fn.isInViewport = function() {
+    //         var elementTop = $(this).offset().top;
+    //         var elementBottom = elementTop + $(this).outerHeight()/2;
+        
+    //         var viewportTop = $(window).scrollTop();
+    //         var viewportBottom = viewportTop + $(window).height()/2;
+        
+    //         return elementBottom > viewportTop && elementTop < viewportBottom;
+    //     };
+
+    //   if ($(this).isInViewport()) {
+    //     console.log('aaa')
+    //     // $($(this)).css({
+    //     //   transform: 'translate(0, 0)',
+    //     //     transition: 'all 1s',
+    //     //     opacity: '1',
+    //     //     background: 'red'
+    //     // }, 500, 'ease');
+    //     $(this).find('.destination-title').addClass('yellow-text')
+    //     $(this).find('.square').addClass('on-screen');
+    //     var dataSource = this.getAttribute('data-attr')
+
+    //     $('.player').attr('src', dataSource)
+    //   }
+    //   else {
+    //     $($(this)).css({
+    //         transform: 'translate(0, 0)',
+    //           transition: 'all 1s',
+    //           opacity: '1',
+    //           background: 'black'
+    //       }, 500, 'ease');
+    //   }
+    // });
+  
+    
+});
+  
 
 function scrollDetection() {
     $('.place').each(function() {
 
         var offset = this.getBoundingClientRect().top;
-
+        // console.log(offset)
         
+        if (offset < 300 && offset > 290){ 
+          var dataSource = this.getAttribute('data-attr')
+          $('.player').attr('src', dataSource)
+        }
         if (offset < 300 && offset > 120){ 
           $(this).find('.destination-title').addClass('yellow-text')
           $(this).find('.square').addClass('on-screen');
-          var dataSource = this.getAttribute('data-attr')
-
-          $('.player').attr('src', dataSource)
-          console.log('uno')
         }
         
         else {
             $(this).find('.destination-title').removeClass('yellow-text')
             $(this).find('.square').removeClass('on-screen');
-            console.log('due')
         }
     })
 }
