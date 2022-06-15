@@ -12,52 +12,6 @@ $('.close').on('click', function(){
 })
 
 
-
-document.querySelector('.destinations').addEventListener('scroll', function(){
-    // scrollDetection();
-    $('.scroll-cue').css('visibility', 'hidden')
-  
-  
-  
-    // $(".place").each(function(){
-    //     $.fn.isInViewport = function() {
-    //         var elementTop = $(this).offset().top;
-    //         var elementBottom = elementTop + $(this).outerHeight()/2;
-        
-    //         var viewportTop = $(window).scrollTop();
-    //         var viewportBottom = viewportTop + $(window).height()/2;
-        
-    //         return elementBottom > viewportTop && elementTop < viewportBottom;
-    //     };
-
-    //   if ($(this).isInViewport()) {
-    //     console.log('aaa')
-    //     // $($(this)).css({
-    //     //   transform: 'translate(0, 0)',
-    //     //     transition: 'all 1s',
-    //     //     opacity: '1',
-    //     //     background: 'red'
-    //     // }, 500, 'ease');
-    //     $(this).find('.destination-title').addClass('yellow-text')
-    //     $(this).find('.square').addClass('on-screen');
-    //     var dataSource = this.getAttribute('data-attr')
-
-    //     $('.player').attr('src', dataSource)
-    //   }
-    //   else {
-    //     $($(this)).css({
-    //         transform: 'translate(0, 0)',
-    //           transition: 'all 1s',
-    //           opacity: '1',
-    //           background: 'black'
-    //       }, 500, 'ease');
-    //   }
-    // });
-  
-    
-});
-  
-
 function scrollDetection() {
     $('.place').each(function() {
 
